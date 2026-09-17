@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sabiha Tex &amp; Apparels — Something is cooking</title>
+  <meta name="description" content="Sabiha Tex & Apparels — textiles and apparel. Our new website is being stitched together. Coming soon." />
+  <meta name="theme-color" content="#1d2554" />
+  <link rel="canonical" href="https://sabihatexandapparels.com/" />
+  <meta property="og:title" content="Sabiha Tex & Apparels — We are cooking something" />
+  <meta property="og:description" content="Textiles and apparel. Our new website is on the stove." />
+  <meta property="og:url" content="https://sabihatexandapparels.com/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,100;1,9..144,400..800,100&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cotton: #f2ead7;
+      --cotton-deep: #e6dbc1;
+      --indigo: #1d2554;
+      --indigo-soft: #2f3b7a;
+      --madder: #b8432a;
+      --turmeric: #dfa63a;
+      --leaf: #5b7a52;
+      --ink: #1a1a24;
+      --muted: #5d5a55;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--cotton);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      overflow-x: hidden;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* woven cotton texture */
+    body::before {
+      content: "";
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        repeating-linear-gradient(0deg, rgba(29,37,84,.035) 0 1px, transparent 1px 4px),
+        repeating-linear-gradient(90deg, rgba(29,37,84,.03) 0 1px, transparent 1px 5px),
+        radial-gradient(120% 80% at 50% 110%, rgba(29,37,84,.12), transparent 60%);
+    }
+    body::after {
+      content: "";
+      position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .22; mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    header, main, footer { position: relative; z-index: 1; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 22px clamp(16px, 4vw, 48px);
+      opacity: 0; animation: fadeDown .9s .1s ease-out forwards;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--indigo); }
+    .brand svg { width: 38px; height: 38px; flex: none; }
+    .brand b {
+      font-family: "Fraunces", serif; font-weight: 700; font-size: clamp(17px, 2.2vw, 21px);
+      letter-spacing: -.01em; line-height: 1; display: block;
+    }
+    .brand small { font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--indigo);
+      border: 1.5px dashed var(--indigo); border-radius: 999px; padding: 7px 14px; white-space: nowrap;
+    }
+    .status i { width: 8px; height: 8px; border-radius: 50%; background: var(--madder); animation: pulse 1.6s infinite; }
+
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(16px, 4vw, 56px);
+      padding: 8px clamp(16px, 5vw, 72px) 24px;
+      max-width: 1320px; width: 100%; margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--madder);
+      display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+      opacity: 0; animation: fadeUp .8s .35s ease-out forwards;
+    }
+    .eyebrow::before { content: ""; width: 34px; border-top: 2px dashed var(--madder); }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-variation-settings: "SOFT" 100, "opsz" 144;
+      font-weight: 600;
+      font-size: clamp(46px, 7.4vw, 108px);
+      line-height: .92;
+      letter-spacing: -.035em;
+      color: var(--indigo);
+    }
+    h1 .line { display: block; overflow: hidden; padding-bottom: .06em; }
+    h1 .line span { display: inline-block; transform: translateY(105%); animation: rise-in 1s cubic-bezier(.2,.8,.2,1) forwards; }
+    h1 .line:nth-child(1) span { animation-delay: .45s; }
+    h1 .line:nth-child(2) span { animation-delay: .6s; }
+    h1 .line:nth-child(3) span { animation-delay: .75s; }
+    h1 em {
+      font-style: italic; font-weight: 500; color: var(--madder);
+      position: relative; display: inline-block;
+    }
+    .stitch-under {
+      position: absolute; left: -2%; bottom: -.08em; width: 104%; height: .32em; overflow: visible;
+    }
+    .stitch-under path {
+      fill: none; stroke: var(--madder); stroke-width: 3; stroke-linecap: round;
+      stroke-dasharray: 9 7;
+      -webkit-mask: none;
+    }
+    .stitch-under .reveal { stroke: var(--cotton); stroke-width: 7; stroke-dasharray: 520; stroke-dashoffset: 0; animation: unstitch 1.6s 1.3s ease-in-out forwards; }
+    .dots::after { content: ""; animation: dots 1.8s steps(4) infinite; }
+
+    .lede {
+      margin-top: 26px; max-width: 46ch;
+      font-size: clamp(14px, 1.35vw, 16px); line-height: 1.7; color: var(--muted);
+      opacity: 0; animation: fadeUp .8s 1.1s ease-out forwards;
+    }
+    .lede strong { color: var(--indigo); font-weight: 500; }
+
+    /* recipe card */
+    .recipe {
+      margin-top: 30px; max-width: 440px;
+      background: #fbf6ea;
+      border: 1.5px solid var(--indigo);
+      box-shadow: 6px 6px 0 var(--indigo);
+      padding: 18px 20px 16px;
+      position: relative;
+      opacity: 0; animation: fadeUp .8s 1.35s ease-out forwards;
+    }
+    .recipe::before {
+      content: "RECIPE Nº 01"; position: absolute; top: -11px; left: 16px;
+      background: var(--turmeric); color: var(--ink); font-size: 10.5px; letter-spacing: .2em; padding: 3px 9px;
+      border: 1.5px solid var(--indigo);
+    }
+    .recipe ol { list-style: none; display: grid; gap: 9px; font-size: 13px; }
+    .recipe li { display: grid; grid-template-columns: 20px 1fr auto; align-items: center; gap: 10px; color: var(--ink); }
+    .recipe li .box {
+      width: 16px; height: 16px; border: 1.5px solid var(--indigo); display: grid; place-items: center;
+    }
+    .recipe li .box svg { width: 11px; height: 11px; stroke: var(--madder); stroke-width: 3; fill: none; stroke-dasharray: 20; stroke-dashoffset: 20; }
+    .recipe li.done .box svg { animation: tick .45s ease-out forwards; }
+    .recipe li.done .txt { text-decoration: line-through; text-decoration-color: rgba(184,67,42,.6); color: var(--muted); }
+    .recipe li .tag { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .recipe li.active .tag { color: var(--madder); }
+    .progress { margin-top: 14px; height: 8px; border: 1.5px solid var(--indigo); position: relative; overflow: hidden; }
+    .progress b {
+      position: absolute; inset: 0; width: 0%;
+      background: repeating-linear-gradient(-45deg, var(--indigo) 0 6px, var(--indigo-soft) 6px 12px);
+      transition: width .9s ease;
+    }
+
+    /* scene */
+    .scene-wrap { position: relative; opacity: 0; animation: fadeIn 1.2s .5s ease-out forwards; }
+    .scene { width: 100%; height: auto; display: block; max-height: 78svh; overflow: visible; }
+
+    .garment { transform-box: fill-box; transform-origin: 50% 50%; animation: float-up 10s linear infinite; }
+    .g1 { animation-delay: 0s; }
+    .g2 { animation-delay: -1.7s; animation-duration: 11s; }
+    .g3 { animation-delay: -3.4s; }
+    .g4 { animation-delay: -5.1s; animation-duration: 12s; }
+    .g5 { animation-delay: -6.8s; }
+    .g6 { animation-delay: -8.5s; animation-duration: 11s; }
+    .g7 { animation-delay: -4.2s; animation-duration: 9s; }
+    .g8 { animation-delay: -9.3s; animation-duration: 10.5s; }
+
+    .steam path { fill: none; stroke: var(--indigo); stroke-width: 3; stroke-linecap: round; opacity: 0; animation: steam 4.2s ease-in-out infinite; }
+    .steam path:nth-child(2) { animation-delay: 1.4s; }
+    .steam path:nth-child(3) { animation-delay: 2.8s; }
+
+    .bubble { transform-box: fill-box; transform-origin: center; animation: bubble 2.4s ease-in infinite; opacity: 0; }
+    .flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flicker .5s ease-in-out infinite alternate; }
+    .flame:nth-child(2) { animation-duration: .38s; }
+    .flame:nth-child(3) { animation-duration: .45s; animation-delay: -.2s; }
+    .flame:nth-child(4) { animation-duration: .42s; }
+    .flame:nth-child(5) { animation-duration: .55s; animation-delay: -.1s; }
+    .spoon { transform-box: view-box; transform-origin: 300px 330px; animation: stir 3.2s ease-in-out infinite; }
+    .spool-thread { animation: unwind 3.2s linear infinite; }
+    .needle { animation: sew 1.1s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .ripple { fill: none; stroke: #8f9ad1; stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: ripple 3.2s ease-out infinite; opacity: 0; }
+    .ripple.r2 { animation-delay: 1.6s; }
+    .pot-shake { transform-box: view-box; transform-origin: 300px 470px; animation: jiggle 2.8s ease-in-out infinite; }
+
+    /* tape measure marquee */
+    footer { margin-top: auto; }
+    .tape {
+      background: var(--turmeric);
+      border-top: 2px solid var(--indigo); border-bottom: 2px solid var(--indigo);
+      overflow: hidden; position: relative;
+    }
+    .tape::before {
+      content: ""; position: absolute; inset: 0 0 auto 0; height: 10px;
+      background: repeating-linear-gradient(90deg, var(--indigo) 0 1.5px, transparent 1.5px 10px);
+      -webkit-mask: linear-gradient(#000, #000); pointer-events: none;
+    }
+    .tape::after {
+      content: ""; position: absolute; inset: 0 0 auto 0; height: 16px;
+      background: repeating-linear-gradient(90deg, var(--indigo) 0 2px, transparent 2px 50px);
+      pointer-events: none;
+    }
+    .tape-track { display: flex; width: max-content; animation: marquee 38s linear infinite; padding: 20px 0 10px; }
+    .tape-track span {
+      font-family: "Fraunces", serif; font-style: italic; font-weight: 500; font-size: clamp(18px, 2.2vw, 26px);
+      color: var(--indigo); padding: 0 22px; white-space: nowrap; display: inline-flex; align-items: center; gap: 22px;
+    }
+    .tape-track span::after { content: "✂"; font-style: normal; font-size: .75em; color: var(--madder); }
+    .foot {
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px;
+      padding: 14px clamp(16px, 4vw, 48px) 18px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+    }
+
+    /* keyframes */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes rise-in { to { transform: translateY(0); } }
+    @keyframes unstitch { to { stroke-dashoffset: -520; } }
+    @keyframes dots { 0% { content: ""; } 25% { content: "."; } 50% { content: ".."; } 75% { content: "..."; } }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.6); opacity: .5; } }
+    @keyframes tick { to { stroke-dashoffset: 0; } }
+    @keyframes float-up {
+      0%   { transform: translate(0, 250px) rotate(0deg) scale(.7); opacity: 0; }
+      8%   { opacity: 1; }
+      30%  { transform: translate(-22px, 120px) rotate(-9deg) scale(.95); }
+      55%  { transform: translate(18px, 0px) rotate(8deg) scale(1); }
+      80%  { transform: translate(-12px, -110px) rotate(-6deg) scale(1); opacity: 1; }
+      100% { transform: translate(8px, -200px) rotate(5deg) scale(.95); opacity: 0; }
+    }
+    @keyframes steam {
+      0% { opacity: 0; transform: translateY(20px); stroke-dashoffset: 0; }
+      30% { opacity: .35; }
+      100% { opacity: 0; transform: translateY(-90px); }
+    }
+    @keyframes bubble {
+      0% { opacity: 0; transform: scale(.2); }
+      40% { opacity: 1; }
+      85% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 0; transform: scale(1.6); }
+    }
+    @keyframes flicker { from { transform: scaleY(.8) scaleX(1.05); } to { transform: scaleY(1.15) scaleX(.92); } }
+    @keyframes stir { 0%,100% { transform: rotate(-9deg); } 50% { transform: rotate(9deg); } }
+    @keyframes unwind { to { stroke-dashoffset: -60; } }
+    @keyframes sew { 0%,100% { transform: translateY(-6px); } 50% { transform: translateY(8px); } }
+    @keyframes ripple { 0% { opacity: .9; transform: scale(.3); } 100% { opacity: 0; transform: scale(1.4); } }
+    @keyframes jiggle { 0%,100% { transform: rotate(0); } 46% { transform: rotate(0); } 50% { transform: rotate(-.8deg); } 54% { transform: rotate(.8deg); } 58% { transform: rotate(0); } }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    @media (max-width: 860px) {
+      main { grid-template-columns: 1fr; padding-top: 4px; }
+      .scene-wrap { order: -1; max-width: 460px; margin: 0 auto; width: 100%; }
+      .scene { max-height: 46svh; }
+      .recipe { max-width: none; }
+      .status span { display: none; }
+    }
+    @media (max-width: 420px) {
+      .brand small { letter-spacing: .12em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      .garment { animation: none; }
+      .tape-track { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/" aria-label="Sabiha Tex &amp; Apparels home">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" fill="#1d2554"/>
+        <path d="M13 26c2 2.2 4.4 3 7.2 3 3.6 0 6.3-1.9 6.3-4.9 0-6-12.2-3.9-12.2-9.4 0-2.4 2.2-4 5.2-4 2.3 0 4.2.8 5.6 2.3" fill="none" stroke="#f2ead7" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M8 20h24" stroke="#dfa63a" stroke-width="1.6" stroke-dasharray="2.5 2.5"/>
+      </svg>
+      <span>
+        <b>Sabiha Tex &amp; Apparels</b>
+        <small>Textile · Apparel</small>
+      </span>
+    </a>
+    <div class="status" role="status"><i></i><span>On the stove</span></div>
+  </header>
+
+  <main>
+    <section>
+      <p class="eyebrow">New website · coming soon</p>
+      <h1 aria-label="We are cooking something">
+        <span class="line"><span>We are</span></span>
+        <span class="line"><span><em>cooking
+          <svg class="stitch-under" viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M4 18 C 90 6, 180 28, 260 14 S 380 12, 396 18"/>
+            <path class="reveal" d="M4 18 C 90 6, 180 28, 260 14 S 380 12, 396 18"/>
+          </svg></em></span></span>
+        <span class="line"><span>something<span class="dots" aria-hidden="true"></span></span></span>
+      </h1>
+      <p class="lede">
+        Fabrics are in the vat, patterns are cut and the needles are warm.
+        <strong>Sabiha Tex &amp; Apparels</strong> is stitching together a new home for our
+        textiles and garments. Pull up a chair — it will be served soon.
+      </p>
+
+      <div class="recipe" aria-label="Progress">
+        <ol id="recipe">
+          <li><span class="box"><svg viewBox="0 0 12 12"><path d="M1.5 6.5l3 3 6-7"/></svg></span><span class="txt">Source the finest yarn</span><span class="tag">done</span></li>
+          <li><span class="box"><svg viewBox="0 0 12 12"><path d="M1.5 6.5l3 3 6-7"/></svg></span><span class="txt">Weave &amp; knit the fabric</span><span class="tag">done</span></li>
+          <li><span class="box"><svg viewBox="0 0 12 12"><path d="M1.5 6.5l3 3 6-7"/></svg></span><span class="txt">Simmer in colour</span><span class="tag">done</span></li>
+          <li><span class="box"><svg viewBox="0 0 12 12"><path d="M1.5 6.5l3 3 6-7"/></svg></span><span class="txt">Cut, sew &amp; finish</span><span class="tag">done</span></li>
+          <li><span class="box"><svg viewBox="0 0 12 12"><path d="M1.5 6.5l3 3 6-7"/></svg></span><span class="txt">Serve the website</span><span class="tag">soon</span></li>
+        </ol>
+        <div class="progress" aria-hidden="true"><b id="bar"></b></div>
+      </div>
+    </section>
+
+    <div class="scene-wrap" aria-hidden="true">
+      <svg class="scene" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="stripes" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+            <rect width="12" height="12" fill="#f7f1e2"/>
+            <rect width="12" height="4" fill="#1d2554"/>
+          </pattern>
+          <pattern id="check" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="#b8432a"/>
+            <rect width="10" height="20" fill="#9a3520" opacity=".7"/>
+            <rect width="20" height="10" fill="#f2ead7" opacity=".28"/>
+          </pattern>
+          <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="#dfa63a"/>
+            <circle cx="7" cy="7" r="2.4" fill="#f7f1e2"/>
+          </pattern>
+          <pattern id="denim" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="6" height="6" fill="#3a4a8c"/>
+            <rect width="2" height="6" fill="#2f3b7a"/>
+          </pattern>
+          <pattern id="leafprint" width="22" height="22" patternUnits="userSpaceOnUse">
+            <rect width="22" height="22" fill="#5b7a52"/>
+            <path d="M5 16c3-8 9-10 12-10-1 6-5 11-12 10z" fill="#f2ead7" opacity=".55"/>
+          </pattern>
+          <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3b4892"/>
+            <stop offset="1" stop-color="#1d2554"/>
+          </linearGradient>
+          <linearGradient id="potBody" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#1a1a24"/>
+            <stop offset=".35" stop-color="#3a3a4a"/>
+            <stop offset=".55" stop-color="#2a2a36"/>
+            <stop offset="1" stop-color="#141420"/>
+          </linearGradient>
+          <clipPath id="aboveSurface">
+            <rect x="-100" y="-200" width="800" height="545"/>
+            <ellipse cx="300" cy="345" rx="158" ry="26"/>
+          </clipPath>
+        </defs>
+
+        <!-- backdrop circle -->
+        <circle cx="300" cy="300" r="250" fill="#e6dbc1"/>
+        <circle cx="300" cy="300" r="250" fill="none" stroke="#1d2554" stroke-width="2" stroke-dasharray="10 8" opacity=".5"/>
+
+        <!-- steam -->
+        <g class="steam">
+          <path d="M240 300 q-18 -30 0 -60 q18 -30 0 -60" stroke-dasharray="6 10"/>
+          <path d="M300 290 q-18 -30 0 -60 q18 -30 0 -60"/>
+          <path d="M360 300 q-18 -30 0 -60 q18 -30 0 -60" stroke-dasharray="6 10"/>
+        </g>
+
+        <g class="pot-shake">
+          <!-- pot back rim + liquid -->
+          <ellipse cx="300" cy="340" rx="182" ry="36" fill="#141420"/>
+          <ellipse cx="300" cy="344" rx="166" ry="28" fill="url(#liquid)"/>
+          <ellipse class="ripple" cx="300" cy="346" rx="80" ry="12"/>
+          <ellipse class="ripple r2" cx="300" cy="346" rx="80" ry="12"/>
+
+          <!-- rising garments, clipped at the dye surface -->
+          <g clip-path="url(#aboveSurface)">
+            <!-- T-shirt (stripes) -->
+            <g transform="translate(240 150)">
+              <g class="garment g1">
+                <path d="M-20 -40 L-46 -28 L-58 -4 L-40 4 L-33 -7 L-33 42 L33 42 L33 -7 L40 4 L58 -4 L46 -28 L20 -40 Q0 -24 -20 -40Z" fill="url(#stripes)" stroke="#1d2554" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M-33 36 H33" stroke="#1d2554" stroke-width="1.5" stroke-dasharray="3 3"/>
+              </g>
+            </g>
+            <!-- Shirt (check) -->
+            <g transform="translate(360 150)">
+              <g class="garment g2">
+                <path d="M-18 -44 L-40 -34 L-54 32 L-41 36 L-30 -4 L-30 46 L30 46 L30 -4 L41 36 L54 32 L40 -34 L18 -44 L0 -30Z" fill="url(#check)" stroke="#1d2554" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M-18 -44 L0 -30 L-8 -18Z M18 -44 L0 -30 L8 -18Z" fill="#f2ead7" stroke="#1d2554" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M0 -30 V46" stroke="#1d2554" stroke-width="2"/>
+                <circle cx="5" cy="-10" r="2.2" fill="#f2ead7"/><circle cx="5" cy="6" r="2.2" fill="#f2ead7"/><circle cx="5" cy="22" r="2.2" fill="#f2ead7"/><circle cx="5" cy="38" r="2.2" fill="#f2ead7"/>
+              </g>
+            </g>
+            <!-- Trousers (denim) -->
+            <g transform="translate(300 150)">
+              <g class="garment g3">
+                <path d="M-30 -46 L30 -46 L35 50 L11 50 L0 -8 L-11 50 L-35 50Z" fill="url(#denim)" stroke="#1d2554" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M-30 -36 H30" stroke="#dfa63a" stroke-width="2" stroke-dasharray="4 3"/>
+                <path d="M-20 -36 q6 12 16 12 M20 -36 q-6 12 -16 12" fill="none" stroke="#dfa63a" stroke-width="1.6" stroke-dasharray="3 3"/>
+              </g>
+            </g>
+            <!-- Dress (dots) -->
+            <g transform="translate(262 150)">
+              <g class="garment g4">
+                <path d="M-14 -46 L-10 -30 Q-22 -24 -18 -8 L-46 48 Q0 58 46 48 L18 -8 Q22 -24 10 -30 L14 -46 Q0 -36 -14 -46Z" fill="url(#dots)" stroke="#1d2554" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M-18 -8 Q0 -2 18 -8" fill="none" stroke="#1d2554" stroke-width="2.5"/>
+              </g>
+            </g>
+            <!-- Hoodie (leaf print) -->
+            <g transform="translate(338 150)">
+              <g class="garment g5">
+                <path d="M-18 -40 Q0 -62 18 -40 L44 -28 L56 34 L42 38 L32 0 L32 46 L-32 46 L-32 0 L-42 38 L-56 34 L-44 -28Z" fill="url(#leafprint)" stroke="#1d2554" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M-14 -38 Q0 -24 14 -38" fill="none" stroke="#1d2554" stroke-width="2.5"/>
+                <path d="M-20 16 H20 L24 34 H-24Z" fill="none" stroke="#1d2554" stroke-width="2"/>
+              </g>
+            </g>
+            <!-- Thread spool -->
+            <g transform="translate(212 150)">
+              <g class="garment g6">
+                <rect x="-22" y="-30" width="44" height="9" rx="2" fill="#c89a5b" stroke="#1d2554" stroke-width="2.5"/>
+                <rect x="-22" y="21" width="44" height="9" rx="2" fill="#c89a5b" stroke="#1d2554" stroke-width="2.5"/>
+                <rect x="-16" y="-21" width="32" height="42" fill="#b8432a" stroke="#1d2554" stroke-width="2.5"/>
+                <path d="M-16 -14 H16 M-16 -7 H16 M-16 0 H16 M-16 7 H16 M-16 14 H16" stroke="#8c2f1b" stroke-width="1.5"/>
+              </g>
+            </g>
+            <!-- Button -->
+            <g transform="translate(392 150)">
+              <g class="garment g7">
+                <circle r="20" fill="#dfa63a" stroke="#1d2554" stroke-width="3"/>
+                <circle r="13" fill="none" stroke="#1d2554" stroke-width="1.5" opacity=".6"/>
+                <circle cx="-5" cy="-5" r="2.6" fill="#1d2554"/><circle cx="5" cy="-5" r="2.6" fill="#1d2554"/>
+                <circle cx="-5" cy="5" r="2.6" fill="#1d2554"/><circle cx="5" cy="5" r="2.6" fill="#1d2554"/>
+              </g>
+            </g>
+            <!-- Sock -->
+            <g transform="translate(300 150)">
+              <g class="garment g8">
+                <path d="M-12 -40 H14 V10 Q14 22 26 26 Q40 32 34 44 Q28 54 12 48 L-8 38 Q-14 34 -12 24Z" fill="url(#stripes)" stroke="#1d2554" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M-12 -30 H14" stroke="#b8432a" stroke-width="5"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- bubbles on surface -->
+          <circle class="bubble" cx="230" cy="348" r="7" fill="none" stroke="#9aa5de" stroke-width="2" style="animation-delay:.2s"/>
+          <circle class="bubble" cx="372" cy="342" r="5" fill="none" stroke="#9aa5de" stroke-width="2" style="animation-delay:1.1s"/>
+          <circle class="bubble" cx="318" cy="356" r="6" fill="none" stroke="#9aa5de" stroke-width="2" style="animation-delay:1.7s"/>
+          <circle class="bubble" cx="268" cy="336" r="4" fill="none" stroke="#9aa5de" stroke-width="2" style="animation-delay:.7s"/>
+
+          <!-- wooden spoon stirring -->
+          <g class="spoon">
+            <path d="M388 180 L336 336" stroke="#8a5a2b" stroke-width="10" stroke-linecap="round"/>
+            <path d="M388 180 L336 336" stroke="#1d2554" stroke-width="10" stroke-linecap="round" fill="none" opacity=".0"/>
+            <ellipse cx="392" cy="170" rx="9" ry="16" transform="rotate(18 392 170)" fill="#a8703a" stroke="#1d2554" stroke-width="2.5"/>
+          </g>
+
+          <!-- pot front -->
+          <path d="M118 342 Q118 360 128 380 L150 452 Q158 478 190 480 L410 480 Q442 478 450 452 L472 380 Q482 360 482 342 Q420 382 300 382 Q180 382 118 342Z" fill="url(#potBody)" stroke="#1a1a24" stroke-width="3"/>
+          <path d="M118 342 Q180 382 300 382 Q420 382 482 342" fill="none" stroke="#565669" stroke-width="7" stroke-linecap="round"/>
+          <!-- label band -->
+          <path d="M134 400 Q300 432 466 400 L458 428 Q300 460 142 428Z" fill="#dfa63a" stroke="#1a1a24" stroke-width="2.5"/>
+          <text x="300" y="434" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-weight="600" font-size="19" fill="#1d2554">Sabiha Tex &amp; Apparels</text>
+          <!-- handles -->
+          <path d="M120 360 q-40 -6 -40 20 q0 24 44 18" fill="none" stroke="#1a1a24" stroke-width="9" stroke-linecap="round"/>
+          <path d="M480 360 q40 -6 40 20 q0 24 -44 18" fill="none" stroke="#1a1a24" stroke-width="9" stroke-linecap="round"/>
+          <path d="M170 372 L188 450" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".12"/>
+        </g>
+
+        <!-- stove + flames -->
+        <g>
+          <g>
+            <path class="flame" d="M220 520 q-12 -18 0 -38 q12 20 0 38z" fill="#dfa63a"/>
+            <path class="flame" d="M262 522 q-15 -24 0 -48 q15 24 0 48z" fill="#b8432a"/>
+            <path class="flame" d="M300 524 q-17 -28 0 -56 q17 28 0 56z" fill="#dfa63a"/>
+            <path class="flame" d="M338 522 q-15 -24 0 -48 q15 24 0 48z" fill="#b8432a"/>
+            <path class="flame" d="M380 520 q-12 -18 0 -38 q12 20 0 38z" fill="#dfa63a"/>
+          </g>
+          <rect x="170" y="520" width="260" height="16" rx="4" fill="#1d2554"/>
+          <rect x="190" y="536" width="12" height="26" fill="#1d2554"/>
+          <rect x="398" y="536" width="12" height="26" fill="#1d2554"/>
+        </g>
+
+        <!-- spool with thread running on the side -->
+        <g transform="translate(92 470)">
+          <rect x="-24" y="-40" width="48" height="10" rx="2" fill="#c89a5b" stroke="#1d2554" stroke-width="2.5"/>
+          <rect x="-24" y="30" width="48" height="10" rx="2" fill="#c89a5b" stroke="#1d2554" stroke-width="2.5"/>
+          <rect x="-17" y="-30" width="34" height="60" fill="#1d2554"/>
+          <path d="M-17 -20 H17 M-17 -10 H17 M-17 0 H17 M-17 10 H17 M-17 20 H17" stroke="#3b4892" stroke-width="2"/>
+          <path class="spool-thread" d="M17 -6 C 60 -20, 40 -110, 110 -140" fill="none" stroke="#b8432a" stroke-width="2.5" stroke-dasharray="8 7"/>
+        </g>
+        <!-- needle sewing on the right -->
+        <g transform="translate(520 430)">
+          <g class="needle">
+            <path d="M0 -70 L4 30 L0 44 L-4 30Z" fill="#9aa0ae" stroke="#1d2554" stroke-width="2"/>
+            <ellipse cx="0" cy="-56" rx="1.6" ry="6" fill="#e6dbc1"/>
+          </g>
+          <path d="M0 -56 C -30 -40, -10 20, -46 40" fill="none" stroke="#dfa63a" stroke-width="2.5" stroke-dasharray="7 6"/>
+          <path d="M-40 70 H40" stroke="#1d2554" stroke-width="2" stroke-dasharray="8 6"/>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <footer>
+    <div class="tape" aria-hidden="true">
+      <div class="tape-track">
+        <span>Woven fabrics</span><span>Knitwear</span><span>Denim</span><span>T-shirts</span><span>Shirts</span><span>Trousers</span><span>Dresses</span><span>Hoodies</span><span>Yarn &amp; thread</span><span>Finishing</span>
+        <span>Woven fabrics</span><span>Knitwear</span><span>Denim</span><span>T-shirts</span><span>Shirts</span><span>Trousers</span><span>Dresses</span><span>Hoodies</span><span>Yarn &amp; thread</span><span>Finishing</span>
+      </div>
+    </div>
+    <div class="foot">
+      <span>© <span id="yr">2026</span> Sabiha Tex &amp; Apparels</span>
+      <span>sabihatexandapparels.com</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+    // Recipe steps tick off one by one, then loop.
+    (function () {
+      var items = Array.prototype.slice.call(document.querySelectorAll("#recipe li"));
+      var bar = document.getElementById("bar");
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var tags = ["done", "done", "done", "done", "soon"];
+      var labels = ["sourcing…", "weaving…", "simmering…", "stitching…", "plating…"];
+      function render(step) {
+        items.forEach(function (li, i) {
+          var tag = li.querySelector(".tag");
+          li.classList.toggle("done", i < step && i < 4);
+          li.classList.toggle("active", i === step);
+          tag.textContent = i < step ? tags[i] : i === step ? labels[i] : "";
+        });
+        bar.style.width = Math.min(92, step * 23) + "%";
+      }
+      if (reduce) { render(4); return; }
+      var step = 0;
+      render(step);
+      setTimeout(function loop() {
+        step = step >= 4 ? 0 : step + 1;
+        render(step);
+        setTimeout(loop, step === 4 ? 4200 : 1500);
+      }, 1800);
+    })();
+  </script>
+</body>
+</html>
