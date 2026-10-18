@@ -106,7 +106,7 @@ def footer():
           {logo}
           <span><b>Sabiha Tex &amp; Apparels</b><small>Textile &middot; Apparel Sourcing</small></span>
         </a>
-        <p style="color:#aeb5d4;max-width:38ch">A Dhaka-based buying house for apparel, knitwear, denim and home textiles — from supplier selection to shipment.</p>
+        <p style="color:#aeb5d4;max-width:38ch">A Dhaka-based buying house for knit and woven apparel, denim, kids' wear, fabrics and accessories — from supplier selection to shipment.</p>
       </div>
       <div>
         <h4>Company</h4>
@@ -123,7 +123,7 @@ def footer():
           <li><a href="mens.html">Men's apparel</a></li>
           <li><a href="womens.html">Women's apparel</a></li>
           <li><a href="kids.html">Kids' apparel</a></li>
-          <li><a href="home-textiles.html">Home textiles &amp; fabrics</a></li>
+          <li><a href="fabrics-accessories.html">Fabrics &amp; accessories</a></li>
         </ul>
       </div>
       <div>
@@ -255,7 +255,7 @@ def tags(items):
 
 PROCESS = [
     ("Enquiry &amp; tech pack", "You send a sketch, tech pack, sample or a reference photo with your target quantity and delivery window."),
-    ("Factory selection", "We shortlist units that actually run your product type &mdash; knit, woven, denim, sweater or home textile &mdash; and that meet the audit standards your brand asks for."),
+    ("Factory selection", "We shortlist units that actually run your product type &mdash; knit, woven or denim &mdash; and that meet the audit standards your brand asks for."),
     ("Sampling &amp; development", "Fabric and trim sourcing, proto, fit and salesman samples, lab dips and strike-offs, revised until the sample is approved."),
     ("Costing &amp; order placement", "A transparent, item-wise costing. Once you approve, we place the order and confirm the production schedule with the factory."),
     ("Production follow-up", "We stay on the floor: fabric in-house, cutting, sewing lines, washing and finishing, with regular updates and photos to you."),
@@ -278,7 +278,7 @@ FAQ_HOME = [
     ("What exactly does a buying house do?",
      "We work on the buyer's side. You tell us what you want made; we find the right factory, develop the samples, negotiate the price, watch production on the floor, inspect the goods and get them shipped. You deal with one office in Dhaka instead of chasing several factories."),
     ("What products can you source?",
-     "Knit and woven garments for men, women and kids &mdash; t-shirts, polos, shirts, jeans and denim, chinos, shorts, sweatshirts, sweaters and outerwear &mdash; plus home textiles such as bed linen, and woven and knit fabrics."),
+     "Knit and woven garments for men, women and kids &mdash; t-shirts, polos, shirts, jeans and denim, chinos, shorts, hoodies, undergarments, hijab and burqa, kids' rompers and outerwear &mdash; plus fabrics, yarn, trims and garment accessories."),
     ("Do you work with new or small brands?",
      "Yes. Quantities, fabric and finishing decide which factory fits, so send your details and we will tell you honestly whether we can place the order well."),
     ("How do I start?",
@@ -298,7 +298,7 @@ def page_home():
             "Your sourcing office on the factory floor in Bangladesh",
             "Sabiha Tex &amp; Apparels is a Dhaka-based buying house. We find the right factory for your order, develop your samples, follow the production line every day and ship your goods with the documents in order.",
             buttons='<div class="btn-row"><a class="btn light" href="contact.html">Send an enquiry</a><a class="btn outline-light" href="services.html">What we do</a></div>',
-            chips=["Knitwear", "Woven", "Denim", "Sweaters", "Kids' wear", "Home textiles"],
+            chips=["Knit", "Woven", "Denim", "Kids' wear", "Fabrics", "Accessories"],
         ),
         """
 <section class="section">
@@ -307,7 +307,7 @@ def page_home():
       <p class="eyebrow">Who we are</p>
       <h2>One office between your brand and the sewing line</h2>
       <p class="lede" style="margin-top:16px">Buying from Bangladesh works when somebody is in the factory every week &mdash; checking fabric, measuring samples and pushing the schedule. That is the job we do for you.</p>
-      <p style="margin-top:14px">We are a textile and apparel sourcing house based at Darus Salam, Dhaka, with a branch office in Munshiganj. We work with knit, woven, denim, sweater and home-textile units, and we choose the unit to suit your product, quantity and compliance requirements &mdash; not the other way round.</p>
+      <p style="margin-top:14px">We work with knit, woven and denim units, and with mills and accessory suppliers for fabric and trims. The unit is chosen to suit your product, quantity and compliance requirements &mdash; not the other way round.</p>
       """ + ticks([
             "A single point of contact for sampling, production and shipment",
             "Item-wise costing you can read line by line",
@@ -343,13 +343,13 @@ def page_home():
     <div class="section-head reveal">
       <p class="eyebrow">Product range</p>
       <h2>What we source</h2>
-      <p>Knit and woven apparel for the whole family, plus home textiles and fabric. Tell us the product and we will tell you which of our units builds it best.</p>
+      <p>Knit and woven apparel for the whole family, plus fabrics and garment accessories. Tell us the product and we will tell you which of our units builds it best.</p>
     </div>
     """ + mcards([
-            ("mens.html", "assets/img/mens-model.jpg", "Category 01", "Men's apparel", "T-shirts, polos, shirts, denim, chinos, knitwear and outerwear."),
-            ("womens.html", "assets/img/womens-hangers.jpg", "Category 02", "Women's apparel", "Tops, blouses, dresses, skirts, denim, knitwear and loungewear."),
-            ("kids.html", "assets/img/kids-baby.jpg", "Category 03", "Kids' apparel", "Baby sets, t-shirts, dresses, school wear, knitwear and outerwear."),
-            ("home-textiles.html", "assets/img/home-pillows.jpg", "Category 04", "Home textiles &amp; fabrics", "Bed linen, towels, cushion covers, woven and knit fabric, yarn and trims."),
+            ("mens.html", "assets/img/mens-model.jpg", "Category 01", "Men's apparel", "T-shirts, polos, shirts, denim, chinos, hoodies, undergarments."),
+            ("womens.html", "assets/img/womens-hangers.jpg", "Category 02", "Women's apparel", "Tops, blouses, dresses, skirts, denim, hijab, burqa, loungewear."),
+            ("kids.html", "assets/img/kids-baby.jpg", "Category 03", "Kids' apparel", "Rompers, baby sets, t-shirts, dresses, school wear, outerwear."),
+            ("fabrics-accessories.html", "assets/img/trims.jpg", "Category 04", "Fabrics &amp; accessories", "Woven and knit fabric, yarn, thread, buttons, zippers, labels, packaging."),
         ]) + """
   </div>
 </section>
@@ -402,7 +402,7 @@ def page_about():
     return "".join([
         hero("assets/img/fabric-store.jpg", "About us",
              "A buying house built on follow-up",
-             "Sabiha Tex &amp; Apparels sources apparel, knitwear, denim and home textiles from Bangladesh for buyers who want one responsible partner on the ground.",
+             "Sabiha Tex &amp; Apparels sources knit and woven apparel, denim, kids' wear, fabrics and accessories from Bangladesh for buyers who want one responsible partner on the ground.",
              compact=True, crumbs=crumb("About")),
         """
 <section class="section">
@@ -412,7 +412,7 @@ def page_about():
       <h2>Who we are</h2>
       <p style="margin-top:16px">Sabiha Tex &amp; Apparels is a textile and apparel sourcing company based in Dhaka, Bangladesh, with a corporate office at Darus Salam on Mirpur Road and a main branch in Munshiganj.</p>
       <p style="margin-top:14px">We act as a buying house: we represent the buyer, not the factory. Our work starts when you send a tech pack or a sample, and it ends when your cartons are loaded with the documents complete. In between we select the unit, develop samples, agree the costing, follow the line and inspect the goods.</p>
-      <p style="margin-top:14px">Bangladesh offers a deep base of knit, woven, denim and sweater manufacturing. The difficulty for an overseas buyer is knowing which unit suits a given product and then keeping that order on schedule. That is exactly the gap we fill.</p>
+      <p style="margin-top:14px">Bangladesh offers a deep base of knit, woven and denim manufacturing, with mills and accessory suppliers alongside it. The difficulty for an overseas buyer is knowing which unit suits a given product and then keeping that order on schedule. That is exactly the gap we fill.</p>
     </div>
     <figure class="reveal"><img src="assets/img/team-meeting.jpg" alt="Team reviewing an order at a meeting table" loading="lazy" /></figure>
   </div>
@@ -551,7 +551,7 @@ def page_products():
     return "".join([
         hero("assets/img/womens-jackets.jpg", "Products",
              "Apparel and textiles we source",
-             "Knit and woven garments for men, women and kids, plus home textiles, fabric, yarn and trims.",
+             "Knit and woven garments for men, women and kids, plus fabric, yarn, trims and garment accessories.",
              compact=True, crumbs=crumb("Products")),
         """
 <section class="section">
@@ -559,13 +559,13 @@ def page_products():
     <div class="section-head reveal">
       <p class="eyebrow">Categories</p>
       <h2>Four ranges, one sourcing office</h2>
-      <p>Each range is produced in units chosen for that product type &mdash; a sweater order never goes to a basic t-shirt line.</p>
+      <p>Each range is produced in units chosen for that product type &mdash; a denim order never goes to a basic t-shirt line.</p>
     </div>
     """ + mcards([
-            ("mens.html", "assets/img/mens-model.jpg", "Range 01", "Men's apparel", "T-shirts, polos, shirts, jeans, chinos, knitwear, outerwear."),
-            ("womens.html", "assets/img/womens-dress.jpg", "Range 02", "Women's apparel", "Tops, blouses, dresses, skirts, denim, knitwear, nightwear."),
-            ("kids.html", "assets/img/kids-dress.jpg", "Range 03", "Kids' apparel", "Baby sets, tops, dresses, school wear, outerwear."),
-            ("home-textiles.html", "assets/img/home-pillows.jpg", "Range 04", "Home textiles &amp; fabrics", "Bed linen, cushions, towels, woven and knit fabric, yarn."),
+            ("mens.html", "assets/img/mens-model.jpg", "Range 01", "Men's apparel", "T-shirts, polos, shirts, jeans, chinos, hoodies, undergarments."),
+            ("womens.html", "assets/img/womens-dress.jpg", "Range 02", "Women's apparel", "Tops, blouses, dresses, skirts, denim, hijab, burqa, nightwear."),
+            ("kids.html", "assets/img/kids-dress.jpg", "Range 03", "Kids' apparel", "Rompers, baby sets, tops, dresses, school wear, outerwear."),
+            ("fabrics-accessories.html", "assets/img/trims.jpg", "Range 04", "Fabrics &amp; accessories", "Woven and knit fabric, yarn, thread, buttons, zippers, labels."),
         ]) + """
   </div>
 </section>
@@ -623,8 +623,8 @@ def page_mens():
             ("assets/img/hangers.jpg", "Casual &amp; formal shirts", "Poplin, twill, oxford, flannel and linen blends, long and short sleeve, with your collar and cuff detailing."),
             ("assets/img/denim-pocket.jpg", "Jeans &amp; denim", "Rigid and stretch denim in your fit block, with enzyme, stone, bleach and tint washes."),
             ("assets/img/denim-jeans.jpg", "Chinos, trousers &amp; shorts", "Cotton twill, canvas and stretch chinos, cargo and swim shorts, to your waistband and pocketing spec."),
-            ("assets/img/knitwear.jpg", "Sweaters &amp; knitwear", "Crew, v-neck, turtle neck, cable and fisherman rib in acrylic, cotton and wool blends at your gauge."),
-            ("assets/img/knitwear-table.jpg", "Sweatshirts &amp; hoodies", "Brushed fleece and terry, zip and pull-over, with rib trims, drawcords and applied artwork."),
+            ("assets/img/cotton-basics.jpg", "Undergarments", "Vests, briefs, boxers, trunks and thermal basics in combed cotton and cotton-elastane, with soft-touch trims and your own waistband tape."),
+            ("assets/img/hoodie.jpg", "Hoodies", "Brushed fleece and terry hoodies, zip and pull-over, with rib trims, drawcords, eyelets and applied artwork."),
         ],
         ["Regular &amp; slim fits", "Oversized", "Garment dye", "Washes", "AOP", "Embroidery", "Reflective trims", "Workwear"],
         "Men's range", "Tell us the style and fabric; we will put it in the right unit and price it line by line.",
@@ -634,17 +634,17 @@ def page_mens():
 def page_womens():
     return category_page(
         "Women's apparel", "Women's knit, woven and denim",
-        "Tops, dresses, denim and knitwear developed to your fit block and finished to your retail standard.",
+        "Tops, dresses, denim and modest wear developed to your fit block and finished to your retail standard.",
         "assets/img/womens-model.jpg",
         [
             ("assets/img/womens-dress.jpg", "Tops &amp; blouses", "Knit tops, woven blouses and shirts in viscose, poplin, linen blends and printed fabrics."),
             ("assets/img/womens-hangers.jpg", "Dresses &amp; skirts", "Casual, printed and occasion styles with lining, trims and closures to your specification."),
             ("assets/img/denim-jeans.jpg", "Jeans &amp; trousers", "Stretch denim, twill and wide-leg styles, with your wash recipe and hardware."),
-            ("assets/img/knitwear.jpg", "Knitwear &amp; cardigans", "Jumpers, cardigans and knitted dresses in your gauge, yarn blend and stitch pattern."),
+            ("assets/img/modestwear.jpg", "Hijab &amp; burqa", "Hijabs, scarves, abayas and burqas in chiffon, georgette, crepe and jersey, with your length, cut, lining and embroidery."),
             ("assets/img/womens-jackets.jpg", "Jackets &amp; outerwear", "Denim, padded and non-padded jackets, quilted and lined styles with branded hardware."),
             ("assets/img/hangers.jpg", "Nightwear &amp; loungewear", "Jersey, flannel and woven sets, robes and joggers for the lounge and sleep range."),
         ],
-        ["Fit sampling", "Grading", "Lining &amp; interlining", "Lace &amp; trims", "Printed fabric", "Garment wash", "Occasion wear", "Basics"],
+        ["Fit sampling", "Grading", "Lining &amp; interlining", "Lace &amp; trims", "Printed fabric", "Garment wash", "Modest wear", "Occasion wear", "Basics"],
         "Women's range", "Send a reference garment or tech pack and we will build the fit sample first, then price the bulk.",
         "Women's apparel")
 
@@ -658,7 +658,7 @@ def page_kids():
             ("assets/img/kids-baby.jpg", "Baby sets &amp; bodysuits", "Soft jersey and interlock sets, rompers, bibs and sleepsuits with nickel-free snaps."),
             ("assets/img/kids-dress.jpg", "Girls' dresses &amp; skirts", "Printed and woven dresses, skirts and sets with lining, frills and safe closures."),
             ("assets/img/kids-girl.jpg", "T-shirts &amp; tops", "Jersey tees, polos and long sleeve tops with safe prints and envelope necks for small sizes."),
-            ("assets/img/knitwear-table.jpg", "Sweatshirts &amp; knitwear", "Fleece sets, cardigans and jumpers in cotton and acrylic blends for school and play."),
+            ("assets/img/kids-romper.jpg", "Kids' rompers", "Rompers, playsuits and dungarees in jersey, interlock and woven cotton, with snap openings and soft binding."),
             ("assets/img/womens-jackets.jpg", "Jackets &amp; outerwear", "Padded, fleece-lined and denim jackets built for daily wear and repeated washing."),
             ("assets/img/hangers.jpg", "School &amp; nightwear", "Uniform shirts, trousers, pinafores and pyjama sets in durable, easy-care fabric."),
         ],
@@ -667,22 +667,22 @@ def page_kids():
         "Kids' apparel")
 
 
-def page_home_textiles():
+def page_fabrics_accessories():
     return category_page(
-        "Home textiles &amp; fabrics", "Home textiles, fabric and yarn",
-        "Bed linen, cushions and towels, plus greige and finished fabric, yarn and trims for buyers who source materials as well as garments.",
-        "assets/img/home-pillows.jpg",
+        "Fabrics &amp; accessories", "Fabric, yarn, trims and accessories",
+        "Greige and finished fabric, yarn, sewing thread and the full trim card &mdash; for buyers who source materials as well as finished garments.",
+        "assets/img/fabric-rolls.jpg",
         [
-            ("assets/img/home-pillows.jpg", "Bed linen &amp; cushions", "Sheets, duvet covers, pillow cases and cushion covers in cotton and poly-cotton, plain, printed or yarn-dyed."),
             ("assets/img/fabric-rolls.jpg", "Woven fabric", "Poplin, twill, oxford, canvas, flannel and denim &mdash; greige, dyed, printed or yarn-dyed to your sample."),
             ("assets/img/fabric-plaid.jpg", "Checks &amp; yarn-dyed", "Plaids, stripes and dobby constructions matched to your colour card and shrinkage standard."),
-            ("assets/img/fabric-sari.jpg", "Printed &amp; speciality fabric", "Rotary, digital and pigment prints, plus textured and ethnic-inspired constructions."),
-            ("assets/img/yarn.jpg", "Yarn &amp; trims", "Cotton, blended and fancy yarns, sewing thread, elastics, labels, buttons and zippers."),
-            ("assets/img/packing.jpg", "Packing &amp; made-ups", "Folding, polybagging, header cards and retail packing for made-up home textile lines."),
+            ("assets/img/fabric-sari.jpg", "Printed &amp; speciality fabric", "Rotary, digital and pigment prints, plus chiffon, georgette, crepe and other speciality constructions."),
+            ("assets/img/yarn.jpg", "Yarn", "Cotton, blended and fancy yarns by count and blend, for knitting and weaving programmes."),
+            ("assets/img/threads.jpg", "Sewing thread &amp; elastics", "Core-spun and spun polyester thread, elastics, drawcords, tapes and interlining matched to your construction."),
+            ("assets/img/trims.jpg", "Buttons, zippers &amp; labels", "Buttons, snaps, zippers, rivets, woven and printed labels, hangtags, barcodes and polybags to your artwork."),
         ],
-        ["Cotton", "Poly-cotton", "Organic cotton", "Recycled fibre", "Yarn-dyed", "Rotary print", "Digital print", "Easy-care finish"],
-        "Home textile &amp; fabric range", "Share a swatch or a specification &mdash; construction, GSM, width and finish &mdash; and we will source matching quality.",
-        "Home textiles")
+        ["Cotton", "Poly-cotton", "Organic cotton", "Recycled fibre", "Yarn-dyed", "Rotary print", "Digital print", "Nickel-free hardware", "Easy-care finish"],
+        "Fabric &amp; accessory range", "Share a swatch or a specification &mdash; construction, GSM, width, count and finish &mdash; and we will source matching quality.",
+        "Fabrics &amp; accessories")
 
 
 def page_quality():
@@ -839,7 +839,7 @@ def page_contact():
             <option>Men's apparel</option>
             <option>Women's apparel</option>
             <option>Kids' apparel</option>
-            <option>Home textiles &amp; fabrics</option>
+            <option>Fabrics &amp; accessories</option>
             <option>Inspection / QC only</option>
             <option>Other</option>
           </select>
@@ -896,7 +896,7 @@ ORG_JSONLD = """<script type="application/ld+json">
     {{"@type": "PostalAddress", "streetAddress": "Atpara, PO Kaliratpara", "addressLocality": "Munshiganj", "addressCountry": "BD"}}
   ],
   "areaServed": "Worldwide",
-  "knowsAbout": ["apparel sourcing", "buying house", "knitwear", "woven garments", "denim", "home textiles"]
+  "knowsAbout": ["apparel sourcing", "buying house", "knit garments", "woven garments", "denim", "kids wear", "fabrics and garment accessories"]
 }}
 </script>
 """.format(site=SITE, email=EMAIL, p1=PHONE1, p2=PHONE2)
@@ -912,7 +912,7 @@ FAQ_JSONLD = """<script type="application/ld+json">
 
 PAGES = [
     ("index.html", "Sabiha Tex & Apparels — Apparel Sourcing &amp; Buying House in Bangladesh",
-     "Sabiha Tex &amp; Apparels is a Dhaka-based apparel sourcing and buying house: supplier selection, sampling, costing, production follow-up, quality inspection and shipment for knitwear, woven, denim, kids' wear and home textiles.",
+     "Sabiha Tex &amp; Apparels is a Dhaka-based apparel sourcing and buying house: supplier selection, sampling, costing, production follow-up, quality inspection and shipment for knit, woven and denim apparel, kids' wear, fabrics and accessories.",
      page_home, ORG_JSONLD + FAQ_JSONLD),
     ("about.html", "About Us — Sabiha Tex &amp; Apparels",
      "A textile and apparel buying house in Dhaka, Bangladesh, representing overseas buyers from factory selection through to shipment.",
@@ -921,20 +921,20 @@ PAGES = [
      "Supplier identification, sample development, costing, production follow-up, quality control, compliance coordination, private label packaging and export documentation.",
      page_services, ""),
     ("products.html", "Products We Source — Sabiha Tex &amp; Apparels",
-     "Men's, women's and kids' knit, woven and denim apparel, plus home textiles, fabric, yarn and trims sourced from Bangladesh.",
+     "Men's, women's and kids' knit, woven and denim apparel, plus fabric, yarn, trims and garment accessories sourced from Bangladesh.",
      page_products, ""),
     ("mens.html", "Men's Apparel Sourcing — Sabiha Tex &amp; Apparels",
-     "T-shirts, polos, shirts, jeans and denim, chinos, shorts, sweaters, sweatshirts and outerwear for men, sourced and inspected in Bangladesh.",
+     "T-shirts, polos, shirts, jeans and denim, chinos, shorts, hoodies, undergarments and outerwear for men, sourced and inspected in Bangladesh.",
      page_mens, ""),
     ("womens.html", "Women's Apparel Sourcing — Sabiha Tex &amp; Apparels",
-     "Tops, blouses, dresses, skirts, denim, knitwear, outerwear and nightwear for women, developed to your fit block in Bangladesh.",
+     "Tops, blouses, dresses, skirts, denim, hijab and burqa, outerwear and nightwear for women, developed to your fit block in Bangladesh.",
      page_womens, ""),
     ("kids.html", "Kids' &amp; Baby Wear Sourcing — Sabiha Tex &amp; Apparels",
-     "Baby sets, t-shirts, dresses, school wear, knitwear and outerwear for children, produced with child-safe trims and construction.",
+     "Rompers, baby sets, t-shirts, dresses, school wear and outerwear for children, produced with child-safe trims and construction.",
      page_kids, ""),
-    ("home-textiles.html", "Home Textiles &amp; Fabric Sourcing — Sabiha Tex &amp; Apparels",
-     "Bed linen, cushion covers, towels, woven and knit fabric, yarn and trims sourced from Bangladeshi mills and made-up units.",
-     page_home_textiles, ""),
+    ("fabrics-accessories.html", "Fabrics &amp; Accessories Sourcing — Sabiha Tex &amp; Apparels",
+     "Woven and knit fabric, yarn, sewing thread, buttons, zippers, labels, hangtags and packaging sourced from Bangladeshi mills and accessory suppliers.",
+     page_fabrics_accessories, ""),
     ("quality.html", "Quality Control &amp; Compliance — Sabiha Tex &amp; Apparels",
      "Pre-production meetings, fabric checks, inline inspection and final random inspection to your AQL, plus factory compliance and documentation.",
      page_quality, ""),
@@ -953,6 +953,26 @@ def build():
         with open(os.path.join(ROOT, filename), "w", encoding="utf-8", newline="\n") as fh:
             fh.write(html)
         print("wrote", filename, len(html) // 1024, "KB")
+
+    # the home textiles range was replaced by fabrics & accessories; keep the old
+    # address working for anyone holding the earlier link
+    redirect = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Moved — Sabiha Tex &amp; Apparels</title>
+<link rel="canonical" href="{site}/fabrics-accessories.html" />
+<meta http-equiv="refresh" content="0; url=fabrics-accessories.html" />
+<meta name="robots" content="noindex" />
+</head>
+<body>
+<p>This page is now <a href="fabrics-accessories.html">Fabrics &amp; accessories</a>.</p>
+</body>
+</html>
+""".format(site=SITE)
+    with open(os.path.join(ROOT, "home-textiles.html"), "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(redirect)
+    print("wrote home-textiles.html (redirect)")
 
     urls = [p[0] for p in PAGES if p[0] != "404.html"]
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
