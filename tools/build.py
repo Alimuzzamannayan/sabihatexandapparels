@@ -16,6 +16,9 @@ PHONE2 = "+8801725256616"
 WHATSAPP = "8801925256616"
 CORP = "122/123 (1st Floor), Darus Salam, Mirpur Road, Dhaka-1216, Bangladesh"
 BRANCH = "Atpara, PO Kaliratpara, Upazila &amp; Zilla: Munshiganj, Bangladesh"
+SAMPLE = ("Holding No. 1286, Muslim Para, Raaz Phulbaria (Ward No. 02),<br />"
+          "Savar, Dhaka &ndash; 1340, Bangladesh")
+SAMPLE_PLAIN = "Holding No. 1286, Muslim Para, Raaz Phulbaria (Ward No. 02), Savar, Dhaka - 1340, Bangladesh"
 
 NAV = [
     ("index.html", "Home"),
@@ -133,6 +136,8 @@ def footer():
           {corp}<br /><br />
           <strong style="color:#fff">Main branch</strong><br />
           {branch}<br /><br />
+          <strong style="color:#fff">Sample section</strong><br />
+          {sample}<br /><br />
           <a href="tel:{p1}">{p1}</a> &middot; <a href="tel:{p2}">{p2}</a><br />
           <a href="mailto:{email}">{email}</a>
         </address>
@@ -149,7 +154,8 @@ def footer():
 <script src="assets/js/site.js"></script>
 </body>
 </html>
-""".format(logo=LOGO, corp=CORP, branch=BRANCH, p1=PHONE1, p2=PHONE2, email=EMAIL, wa=WHATSAPP, wasvg=WA_SVG)
+""".format(logo=LOGO, corp=CORP, branch=BRANCH, sample=SAMPLE, p1=PHONE1, p2=PHONE2,
+           email=EMAIL, wa=WHATSAPP, wasvg=WA_SVG)
 
 
 def hero(img, eyebrow, h1, text, buttons="", chips=None, compact=False, crumbs=""):
@@ -797,6 +803,10 @@ def page_contact():
           <div><h4>Main branch</h4><address>""" + BRANCH + """</address></div>
         </div>
         <div class="row">
+          <span class="ic">""" + ICON_PIN + """</span>
+          <div><h4>Sample section</h4><address>""" + SAMPLE + """</address></div>
+        </div>
+        <div class="row">
           <span class="ic">""" + ICON_PHONE + """</span>
           <div><h4>Mobile &amp; WhatsApp</h4>
             <a href="tel:""" + PHONE1 + '">' + PHONE1 + """</a>
@@ -893,7 +903,8 @@ ORG_JSONLD = """<script type="application/ld+json">
   "telephone": ["{p1}", "{p2}"],
   "address": [
     {{"@type": "PostalAddress", "streetAddress": "122/123 (1st Floor), Darus Salam, Mirpur Road", "addressLocality": "Dhaka", "postalCode": "1216", "addressCountry": "BD"}},
-    {{"@type": "PostalAddress", "streetAddress": "Atpara, PO Kaliratpara", "addressLocality": "Munshiganj", "addressCountry": "BD"}}
+    {{"@type": "PostalAddress", "streetAddress": "Atpara, PO Kaliratpara", "addressLocality": "Munshiganj", "addressCountry": "BD"}},
+    {{"@type": "PostalAddress", "streetAddress": "Holding No. 1286, Muslim Para, Raaz Phulbaria (Ward No. 02)", "addressLocality": "Savar, Dhaka", "postalCode": "1340", "addressCountry": "BD"}}
   ],
   "areaServed": "Worldwide",
   "knowsAbout": ["apparel sourcing", "buying house", "knit garments", "woven garments", "denim", "kids wear", "fabrics and garment accessories"]
