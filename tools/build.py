@@ -623,7 +623,7 @@ def page_mens():
             ("assets/img/hangers.jpg", "Casual &amp; formal shirts", "Poplin, twill, oxford, flannel and linen blends, long and short sleeve, with your collar and cuff detailing."),
             ("assets/img/denim-pocket.jpg", "Jeans &amp; denim", "Rigid and stretch denim in your fit block, with enzyme, stone, bleach and tint washes."),
             ("assets/img/denim-jeans.jpg", "Chinos, trousers &amp; shorts", "Cotton twill, canvas and stretch chinos, cargo and swim shorts, to your waistband and pocketing spec."),
-            ("assets/img/cotton-basics.jpg", "Undergarments", "Vests, briefs, boxers, trunks and thermal basics in combed cotton and cotton-elastane, with soft-touch trims and your own waistband tape."),
+            ("assets/img/undergarments.jpg", "Undergarments", "Bras, panties, men's boxers, briefs, trunks and vests in combed cotton, modal and cotton-elastane, with soft-touch trims, lace and your own waistband tape."),
             ("assets/img/hoodie.jpg", "Hoodies", "Brushed fleece and terry hoodies, zip and pull-over, with rib trims, drawcords, eyelets and applied artwork."),
         ],
         ["Regular &amp; slim fits", "Oversized", "Garment dye", "Washes", "AOP", "Embroidery", "Reflective trims", "Workwear"],
